@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All users</title>
+    <style>
+        table{
+            border-collapse: collapse;
+
+        }
+        td{
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+    <h3>All user list</h3>
+    <table border="1">
+        <tr style="text-align: center">
+            <td colspan="10" >
+                <h2>Members List</h2>
+            </td>
+        </tr>
+        <% if(uList.length != null){%>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>Password</th>
+                <th>Location</th>
+                <th>Action</th>
+            </tr>
+            <% for(var i=0; i < uList.length; i++){ %>
+                <% if(uList[i].user_id != admin_id){%>
+                    <tr>
+                        <td>
+                            <%= uList[i].user_id %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_name %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_email %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_type %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_password %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_location %>
+                        </td>
+                        <td>
+                            <a href="<%=uList[i].user_id%>"> DELETE</a>
+                        </td>
+                    </tr>
+
+                    
+                    <% } } }else{%>
+                        <tr>
+                            <td>
+                                No user found.
+                            </td>
+                        </tr>
+                        <% } %>
+                            <tr>
+                                <td colspan="10"><a href='/home-admin'>Back</a></td>
+                            </tr>
+    </table>
+
+</body>
+</html>
