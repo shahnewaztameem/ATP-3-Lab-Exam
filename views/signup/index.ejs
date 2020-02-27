@@ -4,67 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title%></title>
+    <style>
+        body {
+            width: 700px;
+            margin:  20px auto;
+        }
+    </style>
 </head>
 <body>
-    <h2>Welcome to <%= title%></h2>
+    <h2>Welcome to <%= title %></h2>
     <form action="/signup" method="POST">
-        <table>
-            <tr>
-                <td>Firstname</td>
-                <td><input type="text" name="f_name" id="" placeholder="Enter firstname"></td>
-            </tr>
-            <tr>
-                <td>Firstname</td>
-                <td><input type="text" name="l_name" id="" placeholder="Enter lastname"></td>
-            </tr>
-            <tr>
-                <td>Email</td>
-                <td><input type="email" name="u_email" id="" placeholder="Enter lastname"></td>
-            </tr>
-            <tr>
-                <td>User Type</td>
-                <td>
-                    <select name="user_type" id="">
-                        <option value="admin">Admin</option>
-                        <option value="member">Member</option>
-                    </select>
+        <table class="table table-bordered table-hover">
+            <tr style="text-align: center">
+                <td colspan="6" class="active">
+                    <h2>Sign Up</h2>
                 </td>
-               
             </tr>
+
             <tr>
-                <td>password</td>
+                <td class="labelFont">Firstname</td>
                 <td>
-                    <input type="password" name="u_pass" id="" placeholder="Enter password">
+                    <input class="form-control" type="text" data-toggle="tooltip" data-placement="right" title="Enter Firstname" name="f_name" required>
                 </td>
-                
             </tr>
+
             <tr>
-                <td>Location</td>
+                <td class="labelFont">Lastname</td>
                 <td>
-                    <input type="text" name="u_location" id="" placeholder="Enter location">
+                    <input class="form-control" type="text" name="l_name" required>
                 </td>
-                
             </tr>
+
             <tr>
-                <td>gender</td>
+                <td class="labelFont">Email</td>
                 <td>
-                    <select name="u_gender" id="">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
+                    <input class="form-control" type="email" name="u_email" required>
                 </td>
-                
             </tr>
+
             <tr>
-                <td>Date of birth</td>
+                <td class="labelFont">Usertype</td>
                 <td>
-                    <input type="text" name="u_birthday" id="" placeholder="Enter your date of birth">
+                    <select name="user_type" class="form-control">
+<option value="Member">Member</option>
+<option value="Admin">Admin</option>
+</select>
                 </td>
-                
             </tr>
+
             <tr>
-                <td><input type="submit" value="Signup" name="signup"></td>
-                <td><strong>Already Have an account? <a href="/login">Login Here</a></strong></td>
+                <td class="labelFont">Relationship Status</td>
+                <td>
+                    <select class="form-control" name="relationship_status">
+<option value="Single"  >Single</option>
+<option value="Married" >Married</option>
+<option value="Engaged" >Engaged</option>
+<option value="In a Relationship" >In a Relationship</option>
+<option value="It's Complicated" >It's Complicated</option>
+<option value="Separated" >Separated</option>
+<option value="Divorced" >Divorced</option>
+<option value="Widowed" >Widowed</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Password</td>
+                <td>
+                    <input class="form-control" type="password" name="u_pass" id="mypass" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Confirm Password</td>
+                <td>
+                    <input class="form-control" type="password" name="confirm_pass" id="confirm_pass" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Location</td>
+                <td>
+                    <select class="form-control" name="u_location">
+<option value="Banani" >Banani</option>
+<option value="Gulsan-1" >Gulsan-1</option>
+<option value="Gulsan-2" >Gulsan-2</option>
+<option value="Mohakhali" >Mohakhali</option>
+<option value="Kuril" >Kuril</option>
+<option value="Khilkhet" >Khilkhet</option>
+<option value="Nikunjo-2" >Nikunjo-2</option>
+<option value="Airport" >Airport</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Gender</td>
+                <td>
+                    <select class="form-control" name="u_gender">
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Birthdate</td>
+                <td>
+                    <input class="form-control input-md" id="datePicker" type="text" name="u_birthday" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                    <center> <input type="submit" class="btn btn-info" name="signup" style="width: 40%;" value="Sign up">
+                        <a href="/">Back to home</a>
+                    </center>
+                </td>
             </tr>
         </table>
     </form>
