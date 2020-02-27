@@ -4,13 +4,7 @@ var router = express.Router();
 
 //ROUTES
 router.get('/', (req, res) => {
-    var error = {
-        errors: req.session.errors,
-        success: req.session.success
-    };
-    req.session.errors = null;
-    req.session.success = null;
-    res.render('login/index', error);
+    res.render('login/index');
 });
 
 router.post('/', (req, res) => {

@@ -3,6 +3,7 @@ var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
 var signup = require.main.require('./controllers/signup');
+var login = require.main.require('./controllers/login');
 
 var app = express();
 app.use(expressSession({ secret: 'super secret', saveUninitialized: true, resave: false }));
@@ -15,6 +16,7 @@ app.set('view engine', 'ejs');
 // middleware
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use('/signup', signup);
+app.use('/login', login);
 
 
 
