@@ -3,7 +3,7 @@ var db = require('./db');
 
 module.exports = {
     get: function(userId, callback) {
-        var sql = "select * from users_info where user_id=?";
+        var sql = "select * from users where user_id=?";
         db.getResults(sql, [userId], function(result) {
             if (result.length > 0) {
                 callback(result[0]);
@@ -14,7 +14,7 @@ module.exports = {
     },
 
     getAll: function(callback) {
-        var sql = "select * from users_info";
+        var sql = "select * from users";
         db.getResults(sql, [], function(results) {
             callback(results);
         });
