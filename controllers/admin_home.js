@@ -28,4 +28,12 @@ router.get('/user_list', (req, res) => {
     });
 });
 
+router.get("/delete/:id", function(req, res) {
+
+    userModel.delete(req.params.id, function(status) {
+        res.redirect('/home-admin/user_list');
+    });
+});
+
+
 module.exports = router;

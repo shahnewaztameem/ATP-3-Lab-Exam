@@ -30,6 +30,8 @@
                 <th>Type</th>
                 <th>Password</th>
                 <th>Location</th>
+                <th>Gender</th>
+                <th>Relationship status</th>
                 <th>Action</th>
             </tr>
             <% for(var i=0; i < uList.length; i++){ %>
@@ -54,7 +56,13 @@
                             <%= uList[i].user_location %>
                         </td>
                         <td>
-                            <a href="<%=uList[i].user_id%>"> DELETE</a>
+                            <%= uList[i].user_gender %>
+                        </td>
+                        <td>
+                            <%= uList[i].user_relationship_status %>
+                        </td>
+                        <td>
+                            <a href="/home-admin/delete/<%=uList[i].user_id%>"> DELETE</a>
                         </td>
                     </tr>
 

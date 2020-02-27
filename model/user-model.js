@@ -43,5 +43,15 @@ module.exports = {
         ], function(success) {
             callback(success);
         });
+    },
+    delete: function(id, callback) {
+        var sql = "delete from users where user_id=?";
+        db.execute(sql, [id], function(status) {
+            if (status) {
+                callback(true);
+            } else {
+                callback(false);
+            }
+        });
     }
 }
