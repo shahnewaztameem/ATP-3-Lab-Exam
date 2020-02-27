@@ -2,9 +2,9 @@ var express = require('express');
 var ejs = require('ejs');
 var bodyParser = require('body-parser');
 var expressSession = require('express-session');
-var expressValidator = require('express-validator');
-var signup = require('./controllers/signup');
-app.use(expressSession({ secret: 'super secret', saveUninitialized: true, resave: false }));
+var signup = require.main.require('./controllers/signup');
+
+//app.use(expressSession({ secret: 'super secret', saveUninitialized: true, resave: false }));
 var port = process.env.PORT || 3000;
 var app = express();
 

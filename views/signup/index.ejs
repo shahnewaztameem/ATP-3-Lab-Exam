@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+</head>
+<body>
+    <h2>Welcome to <%= title%></h2>
+    <form action="/signup" method="POST">
+        <table>
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" name="f_name" id="" placeholder="Enter firstname"></td>
+            </tr>
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" name="l_name" id="" placeholder="Enter lastname"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="u_email" id="" placeholder="Enter lastname"></td>
+            </tr>
+            <tr>
+                <td>User Type</td>
+                <td>
+                    <select name="user_type" id="">
+                        <option value="admin">Admin</option>
+                        <option value="member">Member</option>
+                    </select>
+                </td>
+               
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>
+                    <input type="password" name="u_pass" id="" placeholder="Enter password">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>
+                    <input type="text" name="u_location" id="" placeholder="Enter location">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>gender</td>
+                <td>
+                    <select name="u_gender" id="">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+                
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td>
+                    <input type="text" name="u_birthday" id="" placeholder="Enter your date of birth">
+                </td>
+                
+            </tr>
+            <tr>
+                <td><input type="submit" value="Signup" name="signup"></td>
+                <td><strong>Already Have an account? <a href="/login">Login Here</a></strong></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

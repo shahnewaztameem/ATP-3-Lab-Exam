@@ -4,7 +4,8 @@ var router = express.Router();
 
 //ROUTES
 router.get('/', (req, res) => {
-    res.render('signup/index', err);
+    var title = "Registration Page";
+    res.render('signup/index', {title: title});
 });
 
 module.exports = router;
