@@ -71,4 +71,25 @@ router.post('/admin-edit_account', (req, res) => {
         }
     });
 });
+
+router.get('/add_restaurants', (req, res) => {
+    res.render('admin/add_restaurants');
+});
+
+router.post('/add_restaurants', (req, res) => {
+    
+        var data = {
+            r_name: req.body.r_name,
+            r_loc: req.body.r_location,
+            r_details: req.body.r_about,
+        };
+
+    userModel.insertIntoRestaurant(data, (status) => {
+        if (status) {
+            userModel.getRestaurant(data, function(result) {
+                    res.redirect('/home-admin');
+            });
+        }
+    });
+});
 module.exports = router;

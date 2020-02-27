@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a restaurent</title>
+    <style>
+        body {
+            width: 700px;
+            margin:  20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to online food blog</h2>
+    <form method="POST">
+        <table>
+            <tr style="text-align: center">
+                <td colspan="6" >
+                    <h2>Add Restaurants</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="labelFont">Restaurant Name</td>
+                <td>
+                    <input type="text" placeholder="Enter Restaurants Name" name="r_name" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Restaurant Location</td>
+                <td>
+                    <select class="form-control" name="r_location">
+                        <option value="Banani" >Banani</option>
+                        <option value="Gulsan-1" >Gulsan-1</option>
+                        <option value="Gulsan-2" >Gulsan-2</option>
+                        <option value="Mohakhali" >Mohakhali</option>
+                        <option value="Kuril" >Kuril</option>
+                        <option value="Khilkhet" >Khilkhet</option>
+                        <option value="Nikunjo-2" >Nikunjo-2</option>
+                        <option value="Airport" >Airport</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>About Restaurant</td>
+                <td>
+                    <textarea type="text" name="r_about" rows="3" placeholder="About the restaurants" required></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <input type="submit" name="signup" style="width: 40%;" value="Add Restaurant">
+                    <a href="/home-admin">Back</a>
+                    
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

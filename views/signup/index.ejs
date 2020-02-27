@@ -14,7 +14,7 @@
 <body>
     <h2>Welcome to <%= title %></h2>
     <form action="/signup" method="POST">
-        <table class="table table-bordered table-hover">
+        <table>
             <tr style="text-align: center">
                 <td colspan="6" class="active">
                     <h2>Sign Up</h2>
@@ -24,68 +24,68 @@
             <tr>
                 <td class="labelFont">Firstname</td>
                 <td>
-                    <input class="form-control" type="text" data-toggle="tooltip" data-placement="right" title="Enter Firstname" name="f_name" required>
+                    <input  type="text"  title="Enter Firstname" name="f_name" required>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Lastname</td>
+                <td>Lastname</td>
                 <td>
-                    <input class="form-control" type="text" name="l_name" required>
+                    <input type="text" name="l_name" required>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Email</td>
+                <td>Email</td>
                 <td>
-                    <input class="form-control" type="email" name="u_email" required>
+                    <input type="email" name="u_email" required>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Usertype</td>
+                <td >Usertype</td>
                 <td>
                     <select name="user_type" class="form-control">
-<option value="Member">Member</option>
-<option value="Admin">Admin</option>
-</select>
+                        <option value="Member">Member</option>
+                        <option value="Admin">Admin</option>
+                    </select>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Relationship Status</td>
+                <td >Relationship Status</td>
                 <td>
                     <select class="form-control" name="relationship_status">
-<option value="Single"  >Single</option>
-<option value="Married" >Married</option>
-<option value="Engaged" >Engaged</option>
-<option value="In a Relationship" >In a Relationship</option>
-<option value="It's Complicated" >It's Complicated</option>
-<option value="Separated" >Separated</option>
-<option value="Divorced" >Divorced</option>
-<option value="Widowed" >Widowed</option>
-</select>
+                        <option value="Single"  >Single</option>
+                        <option value="Married" >Married</option>
+                        <option value="Engaged" >Engaged</option>
+                        <option value="In a Relationship" >In a Relationship</option>
+                        <option value="It's Complicated" >It's Complicated</option>
+                        <option value="Separated" >Separated</option>
+                        <option value="Divorced" >Divorced</option>
+                        <option value="Widowed" >Widowed</option>
+                    </select>
                 </td>
             </tr>
 
             <tr>
                 <td class="labelFont">Password</td>
                 <td>
-                    <input class="form-control" type="password" name="u_pass" id="mypass" required>
+                    <input type="password" name="u_pass"  required>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Confirm Password</td>
+                <td>Confirm Password</td>
                 <td>
-                    <input class="form-control" type="password" name="confirm_pass" id="confirm_pass" required>
+                    <input type="password" name="confirm_pass"required>
                 </td>
             </tr>
 
             <tr>
-                <td class="labelFont">Location</td>
+                <td >Location</td>
                 <td>
-                    <select class="form-control" name="u_location">
+                    <select  name="u_location">
 <option value="Banani" >Banani</option>
 <option value="Gulsan-1" >Gulsan-1</option>
 <option value="Gulsan-2" >Gulsan-2</option>
@@ -99,28 +99,28 @@
             </tr>
 
             <tr>
-                <td class="labelFont">Gender</td>
+                <td >Gender</td>
                 <td>
-                    <select class="form-control" name="u_gender">
-<option value="Male">Male</option>
-<option value="Female">Female</option>
-<option value="Other">Other</option>
-</select>
+                    <select name="u_gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
                 </td>
             </tr>
 
             <tr>
                 <td class="labelFont">Birthdate</td>
                 <td>
-                    <input class="form-control input-md" id="datePicker" type="text" name="u_birthday" required>
+                    <input type="text" name="u_birthday" required>
                 </td>
             </tr>
 
             <tr>
                 <td colspan="6">
-                    <center> <input type="submit" class="btn btn-info" name="signup" style="width: 40%;" value="Sign up">
+                   <input type="submit"  name="signup" style="width: 40%;" value="Sign up">
                         <a href="/">Back to home</a>
-                    </center>
+                    
                 </td>
             </tr>
         </table>

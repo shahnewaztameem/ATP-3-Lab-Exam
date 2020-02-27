@@ -72,6 +72,27 @@ module.exports = {
                 callback(false);
             }
         });
+    },
+    insertIntoRestaurant: function(data, callback) {
+        var sql = "insert into restaurant_info values(null,?,?,?)";
+        db.execute(sql, [
+            data.r_name,
+            data.r_loc,
+            data.r_details,
+        ], function(status) {
+            if (status) {
+                callback(true);
+            } else {
+                callback(false);
+            }
+        });
+    },
+    getRestaurant: function(data, callback) {
+        var sql = "select r_id from restaurant_info where r_name=? and r_location=?";
+        db.getResults(sql, [data.r_name, data.r_loc], function(result) {
+            callback(result[0]);
+        });
+
     }
 
 }
