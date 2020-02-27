@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
+    <style>
+
+        table {
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px
+        }
+    </style>
 </head>
 <body>
     <h2><a href="/home-admin">Online Food Blog!</a></h2> <br>
@@ -15,6 +24,44 @@
     <button><a href='/home-admin/edit_restaurants'>Edit Restaurant</a></button> |
     <button><a href='/home-admin/view_restaurants'>View Restaurant</a></button>
     <button><a href="/logout">Logout</a></button>
+    <br> <br> <br>
+    <table border="1">
+        <tr>
+            <td colspan="2" align="center"><strong><%= user_info.user_name.toUpperCase()%></strong> information</td>
+        </tr>
+        <tr>
+            <td>Your name:</td>
+            <td><%= user_info.user_name%></td>
+        </tr>
+         <tr>
+            <td>Your Email:</td>
+            <td><%= user_info.user_email%></td>
+        </tr>
+        <tr>
+            <td>Role:</td>
+            <td><%= user_info.user_type%></td>
+        </tr>
+        <tr>
+            <td>Relationship status:</td>
+            <td><%= user_info.user_relationship_status%></td>
+        </tr>
+        <tr>
+            <td>Relationship status:</td>
+            <td><%= user_info.user_location %></td>
+        </tr>
+        <tr>
+            <td>gender:</td>
+            <td><%= user_info.user_gender %></td>
+        </tr>
+        <tr>
+            <td>gender:</td>
+            <td><%= user_info.user_gender %></td>
+        </tr>
+        <tr>
+            <td>gender:</td>
+            <td><%= user_info.user_dob %></td>
+        </tr>
+    </table>
     
 </body>
 </html>
