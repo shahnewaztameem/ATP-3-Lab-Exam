@@ -53,5 +53,25 @@ module.exports = {
                 callback(false);
             }
         });
+    },
+    update: function(user, callback) {
+        var sql = "UPDATE users SET user_name=?,user_email=?,user_relationship_status=?,user_password=?,user_location=?,user_gender=?,user_dob=? where user_id=?";
+        db.execute(sql, [
+            user.name,
+            user.u_email,
+            user.relationship_status,
+            user.u_pass,
+            user.u_location,
+            user.u_gender,
+            user.u_birthday,
+            user.user_id
+        ], function(status) {
+            if (status) {
+                callback(true);
+            } else {
+                callback(false);
+            }
+        });
     }
+
 }

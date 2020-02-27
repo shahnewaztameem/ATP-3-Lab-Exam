@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit profile</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td{
+            padding: 10px
+        }
+    </style>
+</head>
+<body>
+    <form method="POST">
+        <table border="1">
+            <tr style="text-align: center">
+                <td colspan="6">
+                    <h2>Edit Account Info</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Name</td>
+                <td>
+                    <input type="text" title="Enter Name" name="name" value="<%=user_info.user_name%>" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Email</td>
+                <td>
+                    <input type="email" name="u_email" value="<%=user_info.user_email%>" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Relationship Status</td>
+                <td>
+                    <select  name="relationship_status">
+<option value="<%=user_info.user_relationship_status%>" ><%=user_info.user_relationship_status%></option>
+<option value="Single"  >Single</option>
+<option value="Married" >Married</option>
+<option value="Engaged" >Engaged</option>
+<option value="In a Relationship" >In a Relationship</option>
+<option value="It's Complicated" >It's Complicated</option>
+<option value="Separated" >Separated</option>
+<option value="Divorced" >Divorced</option>
+<option value="Widowed" >Widowed</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Password</td>
+                <td>
+                    <input  type="password" name="u_pass" value="<%=user_info.user_password%>" id="mypass" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Location</td>
+                <td>
+                    <select class="form-control" name="u_location">
+<option value="<%=user_info.user_location%>" ><%=user_info.user_location%></option>
+<option value="Banani" >Banani</option>
+<option value="Gulsan-1" >Gulsan-1</option>
+<option value="Gulsan-2" >Gulsan-2</option>
+<option value="Mohakhali" >Mohakhali</option>
+<option value="Kuril" >Kuril</option>
+<option value="Khilkhet" >Khilkhet</option>
+<option value="Nikunjo-2" >Nikunjo-2</option>
+<option value="Airport" >Airport</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="u_gender">
+<option value="<%=user_info.user_gender%>"><%=user_info.user_gender%></option>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+<option value="Other">Other</option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <td >Birthdate</td>
+                <td>
+                    <input value="<%=user_info.user_dob%>" type="text" name="u_birthday" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="6">
+                     <input type="submit" name="signup" style="width: 40%;" value="Update">
+                        <a href="/home-admin">Back</a>
+                   
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

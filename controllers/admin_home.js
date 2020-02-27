@@ -36,4 +36,39 @@ router.get("/delete/:id", function(req, res) {
 });
 
 
+router.get('/admin-edit_account', (req, res) => {
+    userModel.get(req.session.u_id, (result_info) => {
+        if (result_info.user_id != null) {
+            var data = {
+                user_info: result_info,
+                errors: req.session.errors
+            };
+            res.render('admin/edit_profile', data);
+        } else { res.redirect('/home-admin') }
+    });
+});
+
+
+router.post('/admin-edit_account', (req, res) => {
+    var update_user = {
+        name: req.body.name,
+        u_email: req.body.u_email,
+        user_type: req.body.user_type,
+        relationship_status: req.body.relationship_status,
+        u_pass: req.body.u_pass,
+        u_location: req.body.u_location,
+        u_gender: req.body.u_gender,
+        u_birthday: req.body.u_birthday,
+        user_id: req.session.u_id
+    };
+
+    //update user_info table information
+    userModel.update(update_user, (user_update_status) => {
+        if (user_update_status) {
+            res.redirect('/home-admin');
+        } else {
+            res.redirect('/home-admin/admin-edit_account');
+        }
+    });
+});
 module.exports = router;
